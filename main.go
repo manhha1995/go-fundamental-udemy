@@ -12,7 +12,17 @@ func main() {
 	newPointer := &characters
 	newPointer.updateName("Jennifer")
 	fmt.Printf("%+v", newPointer)
+	m := map[string]string{
+		"dog": "bark",
+	}
+	changeMap(m)
+
+	fmt.Println("\n", m)
 }
 func (ptr *person) updateName(newName string) {
 	(*ptr).name = newName
+}
+
+func changeMap(m map[string]string) {
+	m["cat"] = "purr"
 }
