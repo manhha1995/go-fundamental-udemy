@@ -14,19 +14,3 @@ func main() {
 	}
 	fmt.Println(res)
 }
-
-type Shape interface {
-	area() int
-}
-
-type Area struct {
-	sileLength int
-}
-
-func (a Area) calculate() int {
-	return 10
-}
-
-func print(s Shape) {
-	fmt.Println(s.area())
-}
